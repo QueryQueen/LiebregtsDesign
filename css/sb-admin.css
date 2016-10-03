@@ -57,7 +57,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #FF6530;
 }
 
 .top-nav>li>a:hover,
@@ -65,8 +65,8 @@ body {
 .top-nav>.open>a,
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
-    color: #fff;
-    background-color: #1B1429;
+    color: #FF6530;
+    background-color: #222;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -122,7 +122,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #1B1429;
+        background-color: #222;
         bottom: 0;
         overflow-x: hidden;
         padding-bottom: 40px;
