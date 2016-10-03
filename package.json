@@ -1,0 +1,27 @@
+{
+  "name": "liebregts.design",
+  "version": "1.0.0",
+  "description": "[SB Admin](http://startbootstrap.com/template-overviews/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-material-design": "^0.5.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-less-sourcemap": "^1.4.3",
+    "gulp-watch-less": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QueryQueen/LiebregtsDesign.git"
+  },
+  "author": "Joedid",
+  "bugs": {
+    "url": "https://github.com/QueryQueen/LiebregtsDesign/issues"
+  },
+  "homepage": "https://github.com/QueryQueen/LiebregtsDesign#readme"
+}

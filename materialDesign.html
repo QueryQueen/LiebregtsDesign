@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Axan App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+     <link rel="stylesheet" href="dist/index.css">
+     
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
+   
+
+</head>
+
+<body>
+
+
+<!-- Pageheader starts here </!-->
+
+<div class="header-panel">
+    <div class="container-fluid">
+        <div class="row flex-row" id="pageheader">
+            <div class="col-xs-2">
+                <img class="logo" src="img/axan-logo.png" alt="Axan logo">
+            </div>
+            <div class="col-xs-10">
+                <h1>AXAN. <small> Resultaatgericht onderhoud </small></h1> 
+            </div>
+        </div> <!-- end of row </!-->
+    </div> <!-- end of container </!-->
+</div> <!-- end of header-panel -->
+
+<!-- Navbar starts here </!-->
+<div class="container-fluid">
+    <div class="row flex-row">
+        
+        <div class="col-xs-12 col-sm-2" id="navbar">
+            <div class="panel panel-default">
+                <div class="panel-body flex-grow">
+                    <nav class="nav nav-pills nav-stacked">
+                    <h4>Welkom F. Liebregts</h4>
+                    <br>
+                    <br>
+                    <a class="nav-link active" href="#">> Home</a>
+                    <br>
+                    <br>
+                    <a class="nav-link" href="#">> Klanten</a>
+                    <br>
+                    <br>
+                    <a class="nav-link" href="bootstrapTheme.html">> Bootstrap thema</a>
+                    <br>
+                    <br>
+                    <a class="nav-link" href="custom.html">> Custom css</a>
+                    <br>
+                    <br>
+                    <a class="nav-link" href="#">> Logout</a>
+                    </nav> 
+                </div>
+            </div>
+        </div> <!-- end of col navbar</!-->
+
+        <div class="col-xs-12 col-sm-5" id="main1">
+            
+                <h2>Klanten</h2>
+           
+                <form class="form-inline" action="klantZoeken">
+                    <div class="form-group">
+                        <label for="klantZoeken">Zoeken</label>
+                        <input type="text" class="form-control" id="klantNaam" placeholder="Naam klant">
+                    </div>
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                    </button>
+                </form>
+            
+
+        </div> <!--end of col main1 </!-->
+
+        <div class="col-xs-12 col-sm-5" id="main2">
+            <h2>Nieuwe klant toevoegen</h2>
+
+            <form class="form-horizontal" action="KlantToevoegen">
+                <div class="form-group-row">
+                    <label for="naam"> Naam </label>
+                    <input type="text" class="form-control" id="naam">
+                    
+                    <label for="straat"> Straat</label>
+                    <input type="text" class="form-control" id="straat">
+                   
+                    <label for="huisnummer">Huisnummer</label>
+                    <input type="number" class="form-control" id="huisnummer">
+
+                    <label for="postcode">Postcode</label>
+                    <input type="text" class="form-control" id="postcode">
+
+                    <label for="plaats">Plaats</label>
+                    <input type="text" class="form-control" id="plaats">
+
+
+                    <label for="debiteurenNummer">Debiteurennummer</label>
+                    <input type="number" class="form-control" id="debiteurennummer">
+                </div>
+            </form>
+
+            <h3>Contactpersoon toevoegen</h3>
+            <form action="ContactPersoon">
+                <div class="form-group-row">
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" class="form-control" id="voornaam">
+
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" class="form-control" id="achternaam">
+
+                    <label for="email">Email</label>
+                    <input type="emalk" class="form-control" id="email">
+
+                    <label for="telnr">Telefoonnummer</label>
+                    <input type="tel" class="form-control" id="telnr">
+                </div>
+            </form>
+
+             <button type="submit" class="btn btn-primary btn-raised" aria-label="Left Align">
+                <span class="glyphicon glyphicon-ok"></span> Opslaan
+            </button>
+            
+        </div><!-- end of columen main2</!-->
+
+    </div> <!-- end of row </!-->
+</div>  <!-- end of container for main content </!-->
+
+
+<script>
+    $.material.init()
+</script>
+
+
+
+    
+</body>
+</html>
