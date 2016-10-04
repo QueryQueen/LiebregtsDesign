@@ -30,6 +30,15 @@
 
 }
 
+
+.hidden-by-default{
+    display: none;
+}
+
+.unhide{
+    display:block;
+}
+
 /*Typografie*/
 
 h1{

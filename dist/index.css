@@ -9869,6 +9869,7 @@ h1 {
   padding-top: 10px;
   color: #ec3d00;
   font-size: 5em;
+  font-weight: bold;
   -webkit-text-stroke: 1px black;
 }
 h1 small {
