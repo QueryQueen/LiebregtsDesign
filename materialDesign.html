@@ -38,86 +38,90 @@
             <li class="active"><a href="materialDesign.html">Material Design</a></li>
             </ul>
         </div>
+<!-- End of the navbar-->
 
-        <div class="col-xs-12 col-sm-5" id="main1">
-            <div class="well bs-component">
-                <fieldset>
-                    <h2>Klanten</h2>
-                    <form class="form-inline" action="klantZoeken">
-                        <div class="form-group">
-                            <label for="klantZoeken">Zoeken </label>
-                            <input type="text" class="form-control" id="klantNaam" placeholder="Naam klant">
-                        </div>
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
-                            <span class="glyphicon glyphicon-ok"></span>
-                        </button>
-                        
-                        <button type="button" class="btn btn-default" onclick="klantToevoegen()" aria-label="Left Align">
-                            <span class="glyphicon glyphicon-plus-sign"></span>
-                        </button>
+<!-- Start of the main component-->
+        <div class="pages col-xs-9" style="height:739px;">
+            <div class="row">
+                <div class="col-xs-10" id="klantZoeken">
+                    <div class="well page bs-component">
+                        <fieldset>
+                            <h2>Klanten</h2>
+                            <form class="form-horizontal" action="klantZoeken">
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="klantZoeken">Klant zoeken</label>
+                                    <input class="form-control" id="klantZoeken" type="text" style="cursor: auto;">
+                                </div>
+                                <button type="button" class="btn btn-raised btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </button>
+                                    
+                                <button type="button" class="btn btn-raised btn-default" onclick="klantToevoegen()" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                </button>
+                            </form>
+                        </fieldset>
+                    
+                        <!-- Hier begint de klant Toevoegen div. Deze is default niet zichtbaar (hidden)-->
+                        <div class="page hidden-by-default" id="klantToevoegen">
+                            <legend>Nieuwe klant toevoegen</legend>
+                            <form class="form-horizontal" action="KlantToevoegen">
+
+                            <div class="form-group label-floating is-empty">
+                                <label class="control-label" for="naam">Naam</label>
+                                <input class="form-control" id="naam" type="text" style="cursor: auto;">
+                            </div>
+
+                            <div class="form-group label-floating is-empty">
+                                <label class="control-label" for="debiteurennummer">Debiteurennummer</label>
+                                <input class="form-control" id="debiteurennummer" type="text" style="cursor: auto;">
+                            </div>
+
+                                <legend>Adres</legend>
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="straat">Straat</label>
+                                    <input class="form-control" id="straat" type="text" style="cursor: auto;">
+                                </div>
+
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="huisnummer">Huisnummer</label>
+                                    <input class="form-control" id="huisnummer" type="number" style="cursor: auto;">
+                                </div>
+
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="postcode">Postcode</label>
+                                    <input class="form-control" id="postcode" type="text" style="cursor: auto;">
+                                </div>
+
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="plaats">Plaats</label>
+                                    <input class="form-control" id="plaats" type="text" style="cursor: auto;">
+                                </div>
+
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="land">Land</label>
+                                    <input class="form-control" id="land" type="text" style="cursor: auto;">
+                                </div>
+
+                                <legend>Contact</legend>
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="telefoonnummer">Telefoonnummer</label>
+                                    <input class="form-control" id="telefoonnummer" type="text" style="cursor: auto;">
+                                </div>
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label" for="email">Email</label>
+                                    <input class="form-control" id="email" type="email" style="cursor: auto;">
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-raised" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-ok"></span> Opslaan
+                                </button>
                     </form>
-                </fieldset>
-            
-                
-                <div class="hidden-by-default well" id="klantToevoegen">
-                    <legend>Nieuwe klant toevoegen</legend>
-                    <form class="form-horizontal" action="KlantToevoegen">
-
-                    <div class="form-group label-floating is-empty">
-                        <label class="control-label" for="naam">Naam</label>
-                        <input class="form-control" id="naam" type="text" style="cursor: auto;">
-                    </div>
-
-                    <div class="form-group label-floating is-empty">
-                        <label class="control-label" for="debiteurennummer">Debiteurennummer</label>
-                        <input class="form-control" id="debiteurennummer" type="text" style="cursor: auto;">
-                    </div>
-
-                        <legend>Adres</legend>
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="straat">Straat</label>
-                            <input class="form-control" id="straat" type="text" style="cursor: auto;">
-                        </div>
-
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="huisnummer">Huisnummer</label>
-                            <input class="form-control" id="huisnummer" type="number" style="cursor: auto;">
-                        </div>
-
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="postcode">Postcode</label>
-                            <input class="form-control" id="postcode" type="text" style="cursor: auto;">
-                        </div>
-
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="plaats">Plaats</label>
-                            <input class="form-control" id="plaats" type="text" style="cursor: auto;">
-                        </div>
-
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="land">Land</label>
-                            <input class="form-control" id="land" type="text" style="cursor: auto;">
-                        </div>
-
-                        <legend>Contact</legend>
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="telefoonnummer">Telefoonnummer</label>
-                            <input class="form-control" id="telefoonnummer" type="text" style="cursor: auto;">
-                        </div>
-                        <div class="form-group label-floating is-empty">
-                            <label class="control-label" for="email">Email</label>
-                            <input class="form-control" id="email" type="email" style="cursor: auto;">
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-raised" aria-label="Left Align">
-                            <span class="glyphicon glyphicon-ok"></span> Opslaan
-                        </button>
-            </form>
-        </div> <!-- end of well bs-component for form-->
-            
-        </div><!-- end of div KlantToevoegen</!-->
-    </div> <!-- end of row </!-->
-</div>  <!-- end of container for main content </!-->
+                </div> <!-- end of well bs-component for form-->
+                    
+                </div><!-- end of div KlantToevoegen</!-->
+            </div> <!-- end of row </!-->
+        </div>  <!-- end of container for main content </!-->
 
 
 <script>

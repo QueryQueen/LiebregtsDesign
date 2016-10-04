@@ -9875,7 +9875,7 @@ h1 {
   font-size: 5em;
   font-weight: bold;
   -webkit-text-stroke: 2px black;
-  text-align: center;
+  text-align: left;
 }
 h1 small {
   color: white;
