@@ -9853,6 +9853,9 @@ hr.on-light {
   pointer-events: none;
   color: #757575;
 }
+.body {
+  height: 739px;
+}
 .hidden-by-default {
   display: none;
 }
@@ -9871,6 +9874,7 @@ hr.on-light {
 }
 h1 {
   padding-top: 20px;
+  padding-left: 20px;
   color: #ec3d00;
   font-size: 5em;
   font-weight: bold;
@@ -9887,8 +9891,31 @@ h2 {
 .nav-link {
   font-size: 1.5rem;
 }
-.logo {
-  padding-top: 7vh;
-  border-color: white;
+.pages {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  padding: 0;
+  overflow: auto;
+}
+.pages > div {
+  padding: 0 5px;
+  padding-top: 64px;
+  margin: 0;
+}
+.page {
+  transform: translateY(1080px);
+  transition: transform 0 linear;
+  display: none;
+  opacity: 0;
+  font-size: 16px;
+  margin-left: 1em;
+}
+.page.active {
+  transform: translateY(0px);
+  transition: all 0.3s ease-out;
+  display: block;
+  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */

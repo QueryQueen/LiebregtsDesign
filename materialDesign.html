@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height:739px";>
 <head>
     <meta charset="UTF-8">
     <title>Axan App</title>
@@ -22,15 +22,17 @@
     <div class="container-fluid">
         <div class="row flex-row" id="pageheader">
                 <h1>AXAN.</h1> 
-        </div> <!-- end of row </!-->
-    </div> <!-- end of container </!-->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
 </div> <!-- end of header-panel -->
 
-<!-- Navbar starts here </!-->
-<div class="container-fluid">
-    <div class="row flex-row">
+<!-- Main container for the content of the page -->
+<div class="container-fluid main" style="height:595px;">
+
+<!-- Navbar starts here -->
+    <div class="row">
         
-        <div class="col-xs-12 col-sm-2" id="navbar">
+        <div class="col-xs-3" id="navbar" style="height: 595px">
             <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
             <li><a href="basis.html">Home</a></li>
             <li><a href="boostrapTheme.html">Bootstrap Thema</a></li>
@@ -44,7 +46,7 @@
         <div class="pages col-xs-9" style="height:739px;">
             <div class="row">
                 <div class="col-xs-10" id="klantZoeken">
-                    <div class="well page bs-component">
+                    <div class="well page active bs-component">
                         <fieldset>
                             <h2>Klanten</h2>
                             <form class="form-horizontal" action="klantZoeken">
@@ -63,7 +65,7 @@
                         </fieldset>
                     
                         <!-- Hier begint de klant Toevoegen div. Deze is default niet zichtbaar (hidden)-->
-                        <div class="page hidden-by-default" id="klantToevoegen">
+                        <div class="page" id="klantToevoegen">
                             <legend>Nieuwe klant toevoegen</legend>
                             <form class="form-horizontal" action="KlantToevoegen">
 
@@ -127,7 +129,7 @@
 <script>
     $.material.init();
     function klantToevoegen(){
-        $("#klantToevoegen").addClass("unhide")
+        $("#klantToevoegen").addClass("active")
     }
 </script>
 
