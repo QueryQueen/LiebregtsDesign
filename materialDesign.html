@@ -7,34 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        
-     <link rel="stylesheet" href="dist/index.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+    <link rel="stylesheet" href="dist/index.css">
      
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="node_modules/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="node_modules/bootstrap-material-design/dist/js/ripples.min.js"></script>
-
-   
-
 </head>
 
 <body>
-
-
 <!-- Pageheader starts here </!-->
-
 <div class="header-panel">
     <div class="container-fluid">
         <div class="row flex-row" id="pageheader">
-            <div class="col-xs-2">
-                <img class="logo" src="img/axan-logo.png" alt="Axan logo">
-            </div>
-            <div class="col-xs-10">
-                <h1>AXAN. <small> Resultaatgericht onderhoud </small></h1> 
-            </div>
+                <h1>AXAN.</h1> 
         </div> <!-- end of row </!-->
     </div> <!-- end of container </!-->
 </div> <!-- end of header-panel -->
@@ -44,110 +31,91 @@
     <div class="row flex-row">
         
         <div class="col-xs-12 col-sm-2" id="navbar">
-            <div class="panel panel-default">
-                <div class="panel-body flex-grow">
-                    <nav class="nav nav-pills nav-stacked">
-                    <h4>Welkom F. Liebregts</h4>
-                    <br>
-                    <br>
-                    <a class="nav-link active" href="basis.html">> Home</a>
-                    <br>
-                    <br>
-                    <a class="nav-link" href="#">> Klanten</a>
-                    <br>
-                    <br>
-                    <a class="nav-link" href="bootstrapTheme.html">> Bootstrap thema</a>
-                    <br>
-                    <br>
-                    <a class="nav-link" href="custom.html">> Custom css</a>
-                    <br>
-                    <br>
-                    <a class="nav-link" href="#">> Logout</a>
-                    </nav> 
-                </div>
-            </div>
-        </div> <!-- end of col navbar</!-->
+            <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+            <li><a href="basis.html">Home</a></li>
+            <li><a href="boostrapTheme.html">Bootstrap Thema</a></li>
+            <li><a href="custom.html">Custom Thema</a></li>
+            <li class="active"><a href="materialDesign.html">Material Design</a></li>
+            </ul>
+        </div>
 
         <div class="col-xs-12 col-sm-5" id="main1">
+            <div class="well bs-component">
+                <fieldset>
+                    <h2>Klanten</h2>
+                    <form class="form-inline" action="klantZoeken">
+                        <div class="form-group">
+                            <label for="klantZoeken">Zoeken </label>
+                            <input type="text" class="form-control" id="klantNaam" placeholder="Naam klant">
+                        </div>
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        
+                        <button type="button" class="btn btn-default" onclick="klantToevoegen()" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                        </button>
+                    </form>
+                </fieldset>
             
-                <h2>Klanten</h2>
-           
-                <form class="form-inline" action="klantZoeken">
-                    <div class="form-group">
-                        <label for="klantZoeken">Zoeken </label>
-                        <input type="text" class="form-control" id="klantNaam" placeholder="Naam klant">
+                
+                <div class="hidden-by-default well" id="klantToevoegen">
+                    <legend>Nieuwe klant toevoegen</legend>
+                    <form class="form-horizontal" action="KlantToevoegen">
+
+                    <div class="form-group label-floating is-empty">
+                        <label class="control-label" for="naam">Naam</label>
+                        <input class="form-control" id="naam" type="text" style="cursor: auto;">
                     </div>
-                    <button type="button" class="btn btn-default" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-ok"></span>
-                    </button>
-                    
-                    <button type="button" class="btn btn-default" onclick="klantToevoegen()" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-plus-sign"></span>
-                    </button>
-                </form>
-            
 
-        </div> <!--end of col main1 </!-->
+                    <div class="form-group label-floating is-empty">
+                        <label class="control-label" for="debiteurennummer">Debiteurennummer</label>
+                        <input class="form-control" id="debiteurennummer" type="text" style="cursor: auto;">
+                    </div>
 
-        <div class="col-xs-12 col-sm-5 hidden-by-default" id="klantToevoegen">
-            <h2>Nieuwe klant toevoegen</h2>
+                        <legend>Adres</legend>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="straat">Straat</label>
+                            <input class="form-control" id="straat" type="text" style="cursor: auto;">
+                        </div>
 
-            <form class="form-horizontal" action="KlantToevoegen">
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="huisnummer">Huisnummer</label>
+                            <input class="form-control" id="huisnummer" type="number" style="cursor: auto;">
+                        </div>
 
-                <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="naam">Naam</label>
-                    <input class="form-control" id="naam" type="text" style="cursor: auto;">
-                </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="postcode">Postcode</label>
+                            <input class="form-control" id="postcode" type="text" style="cursor: auto;">
+                        </div>
 
-                 <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="debiteurennummer">Debiteurennummer</label>
-                    <input class="form-control" id="debiteurennummer" type="text" style="cursor: auto;">
-                </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="plaats">Plaats</label>
+                            <input class="form-control" id="plaats" type="text" style="cursor: auto;">
+                        </div>
 
-                <h3>Adres</h3>
-                 <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="straat">Straat</label>
-                    <input class="form-control" id="straat" type="text" style="cursor: auto;">
-                </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="land">Land</label>
+                            <input class="form-control" id="land" type="text" style="cursor: auto;">
+                        </div>
 
-                  <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="huisnummer">Huisnummer</label>
-                    <input class="form-control" id="huisnummer" type="number" style="cursor: auto;">
-                </div>
-
-                <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="postcode">Postcode</label>
-                    <input class="form-control" id="postcode" type="text" style="cursor: auto;">
-                </div>
-
-                <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="plaats">Plaats</label>
-                    <input class="form-control" id="plaats" type="text" style="cursor: auto;">
-                </div>
-
-                <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="land">Land</label>
-                    <input class="form-control" id="land" type="text" style="cursor: auto;">
-                </div>
-
-                <h3>Contact</h3>
-                <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="telefoonnummer">Telefoonnummer</label>
-                    <input class="form-control" id="telefoonnummer" type="text" style="cursor: auto;">
-                </div>
-                <div class="form-group label-floating is-empty">
-                    <label class="control-label" for="email">Email</label>
-                    <input class="form-control" id="email" type="email" style="cursor: auto;">
-                </div>
-
+                        <legend>Contact</legend>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="telefoonnummer">Telefoonnummer</label>
+                            <input class="form-control" id="telefoonnummer" type="text" style="cursor: auto;">
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="email" type="email" style="cursor: auto;">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-raised" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-ok"></span> Opslaan
+                        </button>
             </form>
-
-             <button type="submit" class="btn btn-primary btn-raised" aria-label="Left Align">
-                <span class="glyphicon glyphicon-ok"></span> Opslaan
-            </button>
+        </div> <!-- end of well bs-component for form-->
             
-        </div><!-- end of columen main2</!-->
-
+        </div><!-- end of div KlantToevoegen</!-->
     </div> <!-- end of row </!-->
 </div>  <!-- end of container for main content </!-->
 

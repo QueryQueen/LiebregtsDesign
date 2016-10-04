@@ -9870,11 +9870,12 @@ hr.on-light {
   z-index: 3;
 }
 h1 {
-  padding-top: 10px;
+  padding-top: 20px;
   color: #ec3d00;
   font-size: 5em;
   font-weight: bold;
   -webkit-text-stroke: 2px black;
+  text-align: center;
 }
 h1 small {
   color: white;
