@@ -102,14 +102,6 @@
                             <img src="img/axan-logo.png" alt="">
                             Klanten
                         </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-home"></i>  <a href="index.html">Home</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-edit"></i> Klanten
-                            </li>
-                        </ol>
                     </div>
                 </div>
                 <!-- /.row -->
@@ -117,11 +109,8 @@
                 <!-- klanten main stuk-->
                 <div class="col-xs-10 col-sm-5" id="main1">
                     <div class="row">
-                        <h2>Klanten zoeken</h2>
-                    </div>
-  
-                    <div class="row">
                         <form class="form-inline" action="klantZoeken">
+                            <legend>Klanten zoeken</legend>
                             <div class="form-group">
                                 <label for="klantZoeken">Zoeken</label>
                                 <input type="text" class="form-control" id="klantNaam" placeholder="Naam klant">
@@ -130,7 +119,7 @@
                                 <span class="glyphicon glyphicon-ok"></span>
                             </button>
                     
-                            <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <button type="button" class="btn btn-default" onclick="klantToevoegen();" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-plus-sign"></span>
                             </button>
                         </form>
@@ -140,55 +129,39 @@
         
 
                 <div class="col-xs-10 col-sm-5" id="main2">
-                    <h2>Nieuwe klant toevoegen</h2>
-
                     <form action="KlantToevoegen">
                         <div class="form-group-row">
+                            <legend>Klant toevoegen</legend>
                             <label for="naam"> Naam </label>
                             <input type="text" class="form-control" id="naam">
-                            
-                            <label for="straat"> Straat</label>
-                            <input type="text" class="form-control" id="straat">
-                        
-                            <label for="huisnummer">Huisnummer</label>
-                            <input type="number" class="form-control" id="huisnummer">
-
-                            <label for="postcode">Postcode</label>
-                            <input type="text" class="form-control" id="postcode">
-
-                            <label for="plaats">Plaats</label>
-                            <input type="text" class="form-control" id="plaats">
-
-
                             <label for="debiteurenNummer">Debiteurennummer</label>
                             <input type="number" class="form-control" id="debiteurennummer">
-                        </div>
-                    </form>
-
-                    <h3>Contactpersoon toevoegen</h3>
-                    <form action="ContactPersoon">
-                        <div class="form-group">
-                            <label for="voornaam">Voornaam</label>
-                            <input type="text" class="form-control" id="voornaam">
-
-                            <label for="achternaam">Achternaam</label>
-                            <input type="text" class="form-control" id="achternaam">
-
-                            <label for="email">Email</label>
-                            <input type="emalk" class="form-control" id="email">
-
+                            
+                            <legend>Adres</legend>
+                            <label for="straat"> Straat</label>
+                            <input type="text" class="form-control" id="straat">                    
+                            <label for="huisnummer">Huisnummer</label>
+                            <input type="number" class="form-control" id="huisnummer">
+                            <label for="postcode">Postcode</label>
+                            <input type="text" class="form-control" id="postcode">
+                            <label for="plaats">Plaats</label>
+                            <input type="text" class="form-control" id="plaats">
+                            <label for="land">Land</label>
+                            <input type="text" class="form-control" id="land">
+                 
+                            <legend>Contact</legend>       
                             <label for="telnr">Telefoonnummer</label>
                             <input type="tel" class="form-control" id="telnr">
-                        </div>
-                        <div class="formgroup">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        
                             <button type="submit" class="btn btn-primary" aria-label="Left Align">
                                 <span class="glyphicon glyphicon-ok"></span>
+                                Opslaan
                             </button>
-                        </div>
+                       </div>
                     </form>
 
-                    
-                    
                 </div><!-- end of column main2 -->
             </div> <!-- end of row  -->
         </div>  <!-- end of container for main content  -->
@@ -209,6 +182,15 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- little script to make the klant toevoegen appear -->
+    <script>
+        $.material.init();
+        function klantToevoegen(){
+            $("#klantToevoegen").addClass("unhide")
+        }
+    </script>
+
 
 </body>
 
