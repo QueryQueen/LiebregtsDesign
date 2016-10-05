@@ -27,7 +27,6 @@
 .nav > li > a:hover,
 .nav > li > a:focus {
     color:black;
-
 }
 
 .hidden-by-default{
@@ -42,7 +41,7 @@
 
 h1{
     color:white;
-     font-size: 10em;
+    font-size: 10em;
     font-weight: bold;
     -webkit-text-stroke: 1px#1B1429;
     font-family: 'Gidugu', sans-serif;
