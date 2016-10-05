@@ -20,7 +20,7 @@
 
 .nav-link{
      font-family: 'Gidugu', sans-serif;
-     color: #6B5345;
+     color: #1B1429;
      font-size: 3rem;
 }
 
@@ -29,7 +29,6 @@
     color:black;
 
 }
-
 
 .hidden-by-default{
     display: none;
@@ -43,9 +42,10 @@
 
 h1{
     color:white;
-    -webkit-text-stroke: 1px black;
+     font-size: 10em;
+    font-weight: bold;
+    -webkit-text-stroke: 1px#1B1429;
     font-family: 'Gidugu', sans-serif;
-    font-size: 10rem;
     text-align: center;
 }
 
@@ -55,8 +55,14 @@ h1 small{
 
 h2{
     font-family: 'Gidugu', sans-serif;
-     color: #6B5345;
+    color: #1B1429;
     font-size: 5rem;
+}
+
+legend{
+    font-family: 'Gidugu', sans-serif;
+    color: #1B1429;
+    font-size: 4rem;
 }
 
 .dropdown-toggle{
